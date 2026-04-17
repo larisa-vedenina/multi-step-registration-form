@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Complete</title>
+    <link rel="stylesheet" href="css/thanks.css" />
+  </head>
+  <body>
+    <main class="page-container">
+      <section class="thanks-modal" aria-labelledby="thanksTitle">
+        <h1 class="thanks-title" id="thanksTitle">Registration complete</h1>
+
+        <div class="step-date-time" id="stepDateTime">
+          <div class="dates-container">
+            <div class="section-title">Select a date</div>
+            <div class="dates-row" id="datesRow">
+              <button type="button" class="date-card">
+                <span class="day-name">Mon</span>
+                <span class="date-number-container">
+                  <span class="day-number">12</span>
+                  <span class="month-name">Apr</span>
+                </span>
+              </button>
+
+              <button type="button" class="date-card">
+                <span class="day-name">Tue</span>
+                <span class="date-number-container">
+                  <span class="day-number">13</span>
+                  <span class="month-name">Apr</span>
+                </span>
+              </button>
+
+              <button type="button" class="date-card">
+                <span class="day-name">Wed</span>
+                <span class="date-number-container">
+                  <span class="day-number">14</span>
+                  <span class="month-name">Apr</span>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="times-container" id="timesContainer" hidden>
+            <div class="section-title">Select a time</div>
+            <div class="times-grid" id="timesGrid"></div>
+          </div>
+
+          <button class="action-btn" id="selectTimeBtn" disabled>
+            Continue
+          </button>
+
+          <div class="info-text" id="thanksIntro">
+            Choose a convenient time for a short call.
+          </div>
+        </div>
+
+        <div class="step-confirmation" id="stepConfirmation" hidden>
+          <div class="confirmation-content">
+            <button class="change-time-btn" id="changeTimeBtn">
+              Pick another time
+            </button>
+
+            <div
+              class="confirmation-message"
+              id="confirmationMessage"
+              aria-live="polite"
+            ></div>
+
+            <div class="confirmation-info-text">
+              The selected slot will be saved as your preferred contact time.
+            </div>
+
+            <button class="action-btn" id="waitForCallBtn">Confirm slot</button>
+            <p class="completion-note" id="completionNote" hidden></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/thanks.js"></script>
+  </body>
+</html>
